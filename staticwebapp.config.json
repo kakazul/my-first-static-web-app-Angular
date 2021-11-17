@@ -25,33 +25,23 @@
     {
       "route": "/*",
       "allowedRoles": ["authenticated"]
+    },
+    {
+      "route": "/login",
+      "serve": "/.auth/login/b2c"
     }
   ],
   "platformErrorOverrides": [
     {
-      "errorType": "Unauthorized_InsufficientUserInformation",
-      "serve": "/200.html",
-      "statusCode": 200
-    },
-    {
-      "errorType": "Unauthorized_InvalidInvitationLink",
-      "serve": "/200.html",
-      "statusCode": 200
-    },
-    {
-      "errorType": "Unauthorized_MissingRoles",
-      "serve": "/200.html",
-      "statusCode": 200
-    },
-    {
-      "errorType": "Unauthorized_TooManyUsers",
-      "serve": "/200.html",
-      "statusCode": 200
-    },
-    {
-      "errorType": "Unauthorized_Unknown",
-      "serve": "/200.html",
-      "statusCode": 200
+      "errorType": "Unauthenticated",
+      "statusCode": "302",
+      "serve": "/login"
     }
-  ]
+  ],
+  "defaultHeaders": {
+    "content-security-policy": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'"
+  },
+  "mimeTypes": {
+    "custom": "text/html"
+  }
 }
