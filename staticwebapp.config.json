@@ -1,5 +1,18 @@
 {
   "$schema": "https://json.schemastore.org/staticwebapp.config.json" ,
+   "networking": {
+    "allowedIpRanges": [
+      "AzureFrontDoor.Backend"
+    ]
+  },
+  "forwardingGateway": {
+    "allowedForwardedHosts": [
+      "red-forest-0ff350000.azurestaticapps.net"
+    ],
+    "requiredHeaders": {
+      "X-Azure-FDID": "00000000-0000-0000-0000-000000000000"
+    }
+  },  
   "auth": {
     "identityProviders": {
       "customOpenIdConnectProviders": {
