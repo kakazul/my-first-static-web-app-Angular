@@ -29,11 +29,6 @@
   ],
   "platformErrorOverrides": [
     {
-      "errorType": "Unauthenticated",
-      "serve": "/200.html",
-      "statusCode": 200
-    },
-    {
       "errorType": "Unauthorized_InsufficientUserInformation",
       "serve": "/200.html",
       "statusCode": 200
