@@ -33,11 +33,5 @@
       "statusCode": "302",
       "serve": "/.auth/login/b2c"
     }
-  ],
-  "defaultHeaders": {
-    "content-security-policy": "default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'"
-  },
-  "mimeTypes": {
-    "custom": "text/html"
-  }
+  ]
 }
