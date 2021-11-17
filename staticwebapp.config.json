@@ -21,17 +21,11 @@
       }
     }
   },
-  "routes": [
-    {
-      "route": "/*",
-      "allowedRoles": ["authenticated"]
-    }
-  ],
   "platformErrorOverrides": [
     {
       "errorType": "Unauthenticated",
       "statusCode": "302",
-      "serve": "/*"
+      "serve": "/.auth/login/b2c"
     }
   ]
 }
