@@ -34,7 +34,13 @@
             "route": "/logout",
             "rewrite": "/.auth/logout"
         }
-    ],
+  ],
+  "responseOverrides": {
+        "401": {
+            "statusCode": 302,
+            "redirect": "/login"
+        }
+  },
   "platformErrorOverrides": [
     {
       "errorType": "Unauthenticated",
