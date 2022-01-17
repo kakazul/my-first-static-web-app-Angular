@@ -21,6 +21,20 @@
       }
     }
   },
+  "routes": [
+        {
+            "route": "/",
+            "allowedRoles": ["authenticated"]
+        },
+        {
+            "route": "/login",
+            "rewrite": "/.auth/login/b2c"
+        },
+        {
+            "route": "/logout",
+            "rewrite": "/.auth/logout"
+        }
+    ],
   "platformErrorOverrides": [
     {
       "errorType": "Unauthenticated",
