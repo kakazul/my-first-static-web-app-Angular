@@ -41,6 +41,15 @@
             "redirect": "/login"
         }
   },
+  "forwardingGateway": {
+    "requiredHeaders": {
+        "X-Azure-FDID" : "507bf23e-781b-44a8-8d59-4f55f74659f9"
+  },
+  "allowedForwardedHosts": [
+      "afdverify.test.swa-oz.net",
+      "red-forest-0ff350000.azurestaticapps.net"
+  ]
+  }
   "platformErrorOverrides": [
     {
       "errorType": "Unauthenticated",
