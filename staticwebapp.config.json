@@ -49,7 +49,7 @@
       "afdverify.test.swa-oz.net",
       "red-forest-0ff350000.azurestaticapps.net"
   ]
-  }
+  },
   "platformErrorOverrides": [
     {
       "errorType": "Unauthenticated",
